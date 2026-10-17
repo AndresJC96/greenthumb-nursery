@@ -1,0 +1,52 @@
+/* GreenThumb Nursery - Touchstone 3 */
+:root { --green:#315C42; --cream:#F6F3E9; --sage:#A7B88A; --charcoal:#292F29; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--cream); color:var(--charcoal); font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:1.65; }
+a { color:var(--green); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline:3px solid var(--green); outline-offset:3px; }
+.site-header { background:var(--green); color:var(--cream); }
+.header-inner { max-width:1100px; margin:auto; padding:18px 20px; display:flex; flex-direction:column; align-items:center; gap:12px; }
+.brand { display:flex; align-items:center; gap:12px; color:var(--cream); text-decoration:none; font-weight:700; font-size:1.35rem; }
+.brand img { width:42px; height:42px; }
+nav ul { padding:0; margin:0; list-style:none; display:flex; flex-wrap:wrap; gap:6px; justify-content:center; }
+nav a { display:block; color:var(--cream); text-decoration:none; padding:8px 12px; border-radius:6px; font-weight:bold; }
+nav a:hover, nav a[aria-current="page"] { background:var(--sage); color:var(--charcoal); }
+main { max-width:1100px; padding:34px 20px 60px; margin:auto; }
+h1,h2,h3 { line-height:1.25; }
+h1 { font-size:clamp(2rem,5vw,3rem); margin:0 0 16px; color:var(--green); }
+h2 { color:var(--green); font-size:1.6rem; margin:0 0 16px; }
+h3 { font-size:1.18rem; margin:0 0 8px; }
+p { margin:0 0 18px; }
+.intro { max-width:700px; font-size:1.08rem; }
+section { margin-bottom:36px; }
+.panel { background:#fff; /* neutral white for cards */ border:1px solid var(--sage); border-radius:12px; padding:22px; }
+.hero-layout, .card-grid, .about-layout { display:flex; flex-direction:column; gap:22px; }
+.hero-text { flex:1; }
+.hero-image { flex:1; min-width:0; }
+img, picture { max-width:100%; }
+figure { margin:0; }
+figure img, .feature-image, .product-card img { display:block; width:100%; height:auto; border-radius:10px; }
+figcaption { font-size:.86rem; margin-top:8px; }
+.product-card { flex:1; min-width:0; }
+.product-card img { aspect-ratio:4/3; object-fit:cover; margin-bottom:16px; }
+.note { border-left:4px solid var(--green); padding:12px 16px; background:var(--sage); border-radius:4px; }
+a.button, button { display:inline-block; background:var(--green); color:var(--cream); padding:11px 20px; border:0; border-radius:6px; text-decoration:none; font:inherit; font-weight:bold; cursor:pointer; }
+a.button:hover, button:hover { background:var(--charcoal); }
+form { max-width:720px; }
+fieldset { border:1px solid var(--sage); border-radius:9px; padding:18px; margin:0 0 20px; }
+legend { color:var(--green); font-weight:bold; padding:0 6px; }
+.form-field { margin-bottom:16px; }
+label { display:block; font-weight:bold; margin-bottom:5px; }
+input,select,textarea { width:100%; border:1px solid var(--charcoal); border-radius:5px; padding:11px; font:inherit; background:#fff; color:var(--charcoal); }
+textarea { resize:vertical; }
+audio { width:100%; max-width:540px; }
+footer { background:var(--green); color:var(--cream); text-align:center; padding:20px; }
+footer p { margin:0; }
+@media (min-width:760px) {
+ .header-inner { flex-direction:row; justify-content:space-between; }
+ main { padding-top:52px; }
+ .hero-layout, .about-layout { flex-direction:row; align-items:center; }
+ .card-grid { flex-direction:row; }
+ .panel { padding:28px; }
+}
+@media (prefers-reduced-motion: no-preference) { a,button { transition:background-color .15s ease; } }
