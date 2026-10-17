@@ -14,12 +14,19 @@
   </div></header>
   <main>
 <section><h1>Our Plant &amp; Garden Catalog</h1><p class="intro">Take a look at some of our popular plant and gardening options.</p><h2>Popular Plant Categories</h2>
-<div class="card-grid"><article class="panel product-card"><img src="assets/monstera.svg" alt="Illustration of a potted Monstera-style houseplant"><h3>Indoor Houseplants</h3><p>Easy-care tropical houseplants suitable for low to bright indirect light conditions.</p></article>
-<article class="panel product-card"><img src="assets/seeds.svg" alt="Illustration of packets of vegetable seeds"><h3>Organic Vegetable Seeds</h3><p>Heirloom seeds sourced from local organic farms for healthy home harvests.</p></article></div></section>
+<div class="panel shop-tools">
+<label for="category-filter">Show products:</label>
+<select id="category-filter"><option value="all">All products</option><option value="houseplants">Indoor houseplants</option><option value="seeds">Vegetable seeds</option></select>
+<p id="filter-result" role="status" aria-live="polite"></p>
+<p id="favorite-summary" role="status" aria-live="polite"></p>
+</div>
+<div class="card-grid" id="product-list"><article class="panel product-card" data-category="houseplants"><img src="assets/monstera.svg" alt="Illustration of a potted Monstera-style houseplant"><h3>Indoor Houseplants</h3><p>Easy-care tropical houseplants suitable for low to bright indirect light conditions.</p><button type="button" class="favorite-button" data-product="houseplants" aria-pressed="false">Save to favorites</button></article>
+<article class="panel product-card" data-category="seeds"><img src="assets/seeds.svg" alt="Illustration of packets of vegetable seeds"><h3>Organic Vegetable Seeds</h3><p>Heirloom seeds sourced from local organic farms for healthy home harvests.</p><button type="button" class="favorite-button" data-product="seeds" aria-pressed="false">Save to favorites</button></article></div></section>
 <section class="panel"><h2>Gardening Advice Podcast</h2><p>Listen to our quick tips for seasonal planting and soil preparation:</p>
 <audio controls preload="none"><source src="assets/gardening-tips.mp3" type="audio/mpeg">Your browser does not support the audio element. <a href="assets/gardening-tips.mp3">Download the gardening tips audio guide</a>.</audio>
 <p><a href="assets/gardening-tips.mp3" download>Download the audio guide (MP3)</a></p><div class="note"><strong>Audio tips in writing:</strong> Check the amount of sunlight your plants need, water based on soil moisture, and add compost to help improve garden soil.</div></section>
 </main>
   <footer><p>&copy; 2026 GreenThumb Nursery. All rights reserved.</p></footer>
+<script src="script.js" defer></script>
 </body>
 </html>

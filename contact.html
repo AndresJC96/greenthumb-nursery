@@ -14,18 +14,19 @@
   </div></header>
   <main>
 <section><h1>Contact GreenThumb Nursery</h1><h2>Get in Touch</h2><p class="intro">Have questions about plant care or inventory? Send us a message below.</p>
-<form action="#" method="post" onsubmit="event.preventDefault(); document.getElementById('form-status').textContent='This is a sample contact form. Your message has not been sent.';">
+<form id="contact-form" action="#" method="post" novalidate>
 <fieldset><legend>Personal Information</legend>
-<div class="form-field"><label for="fullname">Full Name:</label><input type="text" id="fullname" name="fullname" autocomplete="name" required></div>
-<div class="form-field"><label for="email">Email Address:</label><input type="email" id="email" name="email" autocomplete="email" required></div>
-<div class="form-field"><label for="phone">Phone Number (Format: 123-456-7890):</label><input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></div>
+<div class="form-field"><label for="fullname">Full Name:</label><input type="text" id="fullname" name="fullname" autocomplete="name" required><span class="field-error" id="fullname-error" aria-live="polite"></span></div>
+<div class="form-field"><label for="email">Email Address:</label><input type="email" id="email" name="email" autocomplete="email" required><span class="field-error" id="email-error" aria-live="polite"></span></div>
+<div class="form-field"><label for="phone">Phone Number (Format: 123-456-7890):</label><input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><span class="field-error" id="phone-error" aria-live="polite"></span></div>
 </fieldset>
 <fieldset><legend>Your Inquiry</legend>
-<div class="form-field"><label for="topic">Inquiry Type:</label><select id="topic" name="topic" required><option value="">-- Please select an option --</option><option value="plant-care">Plant Care Advice</option><option value="inventory">Inventory Availability</option><option value="events">Workshops &amp; Events</option></select></div>
-<div class="form-field"><label for="message">Message:</label><textarea id="message" name="message" rows="5" minlength="10" required></textarea></div>
+<div class="form-field"><label for="topic">Inquiry Type:</label><select id="topic" name="topic" required><option value="">-- Please select an option --</option><option value="plant-care">Plant Care Advice</option><option value="inventory">Inventory Availability</option><option value="events">Workshops &amp; Events</option></select><span class="field-error" id="topic-error" aria-live="polite"></span></div>
+<div class="form-field"><label for="message">Message:</label><textarea id="message" name="message" rows="5" minlength="10" required></textarea><span class="field-error" id="message-error" aria-live="polite"></span></div>
 </fieldset><button type="submit">Submit Message</button><p id="form-status" role="status" aria-live="polite"></p>
 </form></section>
 </main>
   <footer><p>&copy; 2026 GreenThumb Nursery. All rights reserved.</p></footer>
+<script src="script.js" defer></script>
 </body>
 </html>

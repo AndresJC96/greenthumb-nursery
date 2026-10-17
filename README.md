@@ -1,17 +1,13 @@
-# GreenThumb Nursery — Touchstone 3
+# GreenThumb Nursery — Touchstone 4
 
-This project builds on the four HTML pages submitted for Touchstone 2.
+This is the same four-page GreenThumb Nursery website from Touchstones 2 and 3, now with a JavaScript file (`script.js`).
 
-## Files
-- `index.html`, `products.html`, `about.html`, `contact.html`
-- `style.css` — shared, mobile-first stylesheet
-- `assets/` — local SVG illustrations and short original audio gardening tips
+## New features
+- On Products, filter by product category and save/remove favorites. Both the selected filter and favorite items are remembered using `localStorage` on the same browser.
+- On Contact Us, JavaScript checks name, email, optional phone format, inquiry type, and minimum message length. Errors appear beside the fields and entries are preserved.
+- The contact form is a **demonstration only** and does not send a message.
 
-## Preview
-Open `index.html` in a browser. All navigation links use relative paths.
+## Test
+Open the Products page, save a favorite, choose a filter, then refresh. Both should be restored. On Contact Us, submit an empty form to see inline error messages, then correct the entries. Check mobile and desktop layouts.
 
-## GitHub Pages
-Upload the files to a public GitHub repository, then open Settings → Pages → Deploy from a branch → main → / (root). After publishing, add the actual repository and preview URLs to the Touchstone 3 Word template.
-
-## Note
-The original Touchstone 2 Word submission contained references to photos and audio but not the actual media. This version includes local illustrations and a short audio clip so the project works without missing files. The contact form is a front-end demonstration and does not send messages.
+Upload all the files and the `assets` folder to the existing GitHub repository, replacing the prior HTML/CSS files and adding `script.js`.
